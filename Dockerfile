@@ -8,6 +8,11 @@ ARG DART_SAAS_VERSION="1.57.1"
 
 WORKDIR /tmp
 
+# Install Node.js
+RUN apt update && \
+    apt install -y nodejs npm  && \
+    apt clean
+
 # Install Hugo CLI
 RUN wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
     dpkg --install hugo.deb && \
