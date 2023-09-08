@@ -13,10 +13,9 @@ RUN apt update && \
     apt install -y nodejs npm  && \
     apt clean
 
-# Install Hugo CLI
-RUN wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
-    dpkg --install hugo.deb && \
-    rm -rf hugo.deb
+# Install Hugo ClI
+COPY scripts/install_hugo.sh install_hugo.sh
+RUN ./install_hugo.sh
 
 # Install Dart Sass
 RUN wget -O dart-saas.tar.gz https://github.com/sass/dart-sass/releases/download/${DART_SAAS_VERSION}/dart-sass-${DART_SAAS_VERSION}-linux-x64.tar.gz && \
