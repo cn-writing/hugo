@@ -1,14 +1,14 @@
 {
-  "extends": [
-    "config:base"
-  ],
+  "extends": ["config:recommended", ":dependencyDashboard"],
   "regexManagers": [
     {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": [
-        "datasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\sENV .*?_VERSION=(?<currentValue>.*)\\s"
+      "fileMatch": [
+        "(^|/)Dockerfile$",
+        "(^|/)Dockerfile\\.[^/]*$"
       ],
-      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
+      "matchStrings": [
+        "#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?( extractVersion=(?<extractVersion>.*?))?\\s(ENV|ARG) .*?_VERSION=(?<currentValue>.*)\\s"
+      ]
     }
   ]
 }
