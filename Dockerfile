@@ -4,7 +4,7 @@ LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 # renovate: datasource=github-releases depName=gohugoio/hugo
 ARG HUGO_VERSION=v0.118.2
 # renovate: datasource=github-releases depName=sass/dart-sass
-ARG DART_SAAS_VERSION=1.67.0
+ARG DART_SAAS_VERSION=1.68.0
 
 WORKDIR /tmp
 
