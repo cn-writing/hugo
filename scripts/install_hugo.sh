@@ -2,6 +2,7 @@
 
 HUGO_VERSION_NO_PREFIX=${HUGO_VERSION:1}
 
+ARCH=$(uname -m)
 if [[ "$ARCH" == "x86_64" ]]
 then
     ARCH="amd64"
