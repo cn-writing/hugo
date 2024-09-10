@@ -13,7 +13,7 @@ tar -xzvf dart-sass.tar.gz
 
 rm -rf dart-sass.tar.gz
 
-mv dart-sass/sass /usr/bin
+mv dart-sass/* /usr/bin
 
 chmod +x /usr/bin/sass
 
