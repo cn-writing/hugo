@@ -10,7 +10,7 @@ WORKDIR /tmp
 
 # Install Node.js
 RUN apt update && \
-    apt install -y nodejs npm  && \
+    apt install -y git make nodejs npm && \
     apt clean
 
 # Install Hugo ClI
