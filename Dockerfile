@@ -20,3 +20,6 @@ RUN ./install_hugo.sh
 # Install Dart Sass
 COPY scripts/install-dart-sass.sh install-dart-sass.sh
 RUN ./install-dart-sass.sh
+
+# Install Post.Css
+RUN npm install --global postcss postcss-cli autoprefixer
