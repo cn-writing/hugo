@@ -1,4 +1,4 @@
-FROM golang:1.24-bookworm
+FROM golang:1.25-bookworm
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=github-releases depName=gohugoio/hugo
