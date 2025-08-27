@@ -2,7 +2,7 @@ FROM golang:1.25-bookworm
 LABEL maintainer="Julian Nonino <noninojulian@gmail.com>"
 
 # renovate: datasource=github-releases depName=gohugoio/hugo
-ARG HUGO_VERSION=v0.148.2
+ARG HUGO_VERSION=v0.149.0
 # renovate: datasource=github-releases depName=sass/dart-sass
 ARG DART_SASS_VERSION=1.91.0
 
