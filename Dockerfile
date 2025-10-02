@@ -8,12 +8,13 @@ ARG DART_SASS_VERSION=1.93.2
 
 WORKDIR /tmp
 
-# Install Node.js
-RUN apt update && \
-    apt install -y git make nodejs npm && \
+# Install Git, Make, Node.js and Task
+RUN curl -1sLf 'https://dl.cloudsmith.io/public/task/task/setup.deb.sh' | -E bash && \
+    apt update && \
+    apt install -y git make nodejs npm task && \
     apt clean
 
-# Install Hugo ClI
+# Install Hugo Cli
 COPY scripts/install_hugo.sh install_hugo.sh
 RUN ./install_hugo.sh
 
